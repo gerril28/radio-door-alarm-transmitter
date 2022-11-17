@@ -1,9 +1,9 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.acceleration(Dimension.Z))
+    basic.showNumber(input.magneticForce(Dimension.Strength))
 })
 radio.setGroup(17)
 basic.forever(function () {
-    if (input.acceleration(Dimension.Z) < 100) {
+    if (input.magneticForce(Dimension.Strength) < 100) {
         basic.showIcon(IconNames.SmallDiamond)
         radio.sendString("Door Open")
     } else {
